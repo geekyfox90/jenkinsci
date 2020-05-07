@@ -1,0 +1,14 @@
+pipeline {
+    agent { 
+        label "slave-docker"
+    }
+    stages {
+        stage('build') {
+            steps {
+                  echo 'Building....'
+                  bat label: '', script: 'dir'
+            }
+        }
+     }
+}
+    

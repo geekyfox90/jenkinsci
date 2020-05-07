@@ -6,7 +6,12 @@ pipeline {
         stage('build') {
             steps {
                   echo 'Building....'
-                  bat label: '', script: 'dir'
+            }
+        }
+
+        stage("Run") {
+            steps {
+                bat "dir"
             }
         }
      }
